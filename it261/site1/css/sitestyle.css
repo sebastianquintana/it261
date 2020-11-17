@@ -1,0 +1,80 @@
+* {
+    padding : 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+}
+header {
+    
+    background: tan;
+}
+.row {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+#logo {
+    width: 190px;
+    margin: 20px 0 20px 0;
+}
+nav {
+    height: 150px;
+    line-height: 50px;
+    background: red;
+}
+nav li {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    width: 16.66%;
+}
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+nav ul {
+    width: 1200px;
+    margin: 0 auto;
+}
+nav a:hover{
+    background: #666;
+    display: block;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main{
+    width: 62%;
+    float: left;   
+    background: lightblue;
+    height: 400px;
+}
+aside{
+    width: 35%;
+    float: right;
+    background: pink;
+    height: 300px;
+}
+
+footer{
+    height: 300px;
+    background: #fff;
+    clear: both;
+}
+.copyright {
+    height: 50px;
+    line-height: 50px;
+    background: orange;
+}
+.copyright li {
+    float: left;
+    list-style-type: none;
+    margin-right: 30px;
+}
+.copyright img {
+    margin-top: 5px;
+}

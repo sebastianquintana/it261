@@ -1,0 +1,108 @@
+/*styles for my new website*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.active {
+   color: brown;
+}
+.home {
+    background: beige;
+}
+.about {
+    background: lightcyan;
+}
+
+.contact {
+    background:lightgrey;
+}
+.daily {
+    background:lightgreen;
+}
+.gallery {
+    background: lightskyblue;
+}
+.customers {
+    background: lightpink;
+}
+
+.center {
+    text-align: center;
+}
+header {
+    margin-bottom: 20px;
+    background: orange;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.inner-header{
+    width: 940px;
+    margin: 20px auto;
+}
+
+#logo{
+    width:150px;
+    float: left;
+
+}
+nav ul {
+    float: right;
+    margin-top: 20px;
+}
+nav li{
+    float:left;
+    margin-left: 15px;
+    list-style-type: none;
+
+}
+#wrapper{
+     clear: both;
+     width: 940;
+     margin: 0 auto;
+}
+main {
+    width: 580px;
+    float: left;
+    
+}
+
+aside {
+    width: 340px;
+    float: right;
+    background: lightblue;
+
+}
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px dotted tan;
+    clear: both;
+}
+footer li {
+    float: left;
+    margin-right: 30px;
+    list-style-type:none ;
+}
+img {
+    max-width: 100%;
+    margin-left: 180px;
+    
+}
+blockquote {
+    font-size: 1.4em;
+    margin: 20px 100px 20px 100px;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 12px;
+}
+.home h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    margin-bottom: 9px;
+}

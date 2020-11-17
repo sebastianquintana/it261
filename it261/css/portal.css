@@ -1,0 +1,51 @@
+* {
+    padding : 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+}
+header {
+    
+    background: tan;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main{
+    width: 62%;
+    float: left;   
+    background: lightblue;
+    height: 400px;
+}
+aside{
+    width: 35%;
+    float: right;
+    background: pink;
+    height: 300px;
+}
+
+footer{
+    height: 300px;
+    background: #fff;
+    clear: both;
+}
+.copyright {
+    height: 50px;
+    line-height: 50px;
+    background: orange;
+}
+.copyright li {
+    float: left;
+    list-style-type: none;
+    margin-right: 30px;
+}
+.copyright img {
+    margin-top: 5px;
+}
