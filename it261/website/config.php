@@ -90,4 +90,123 @@ return $myReturn;
 
 }//end function
 
+
+
+$firstName = '';
+$lastName = '';
+$email = '';
+$comments = '';
+
+$gender = '';
+$wines = '';
+$privacy = '';
+$tel = '';
+
+$firstNameErr = '';
+$lastNameErr = '';
+$emailErr = '';
+$commentsErr = '';
+$genderErr = '';
+$winesErr = '';
+$privacyErr = '';
+$telErr = '';
+
+
+
+if($_SERVER['REQUEST_METHOD']== 'POST'){
+
+if(empty($_POST['firstName'])){
+    $firstNameErr = ' Please fill out your first name!';
+}else{
+    $firstName = $_POST['firstName'];
+}
+
+if(empty($_POST['lastName'])){
+    $lastNameErr = ' Please fill out your first name!';
+}else{
+    $lastName = $_POST['lastName'];
+}
+
+if(empty($_POST['email'])){
+    $emailErr = ' Please fill out your email!';
+}else{
+    $email = $_POST['email'];
+}
+
+if(empty($_POST['wines'])){
+    $winesErr = 'Pick your wine !';
+}else{
+    $wines = $_POST['wines'];
+}
+if(empty($_POST['privacy'])){
+    $privacyErr= ' Please agree to our privacy rules!';
+}else{
+    $privacy = $_POST['privacy'];
+}
+if(empty($_POST['tel'])) {  // if empty, type in your number
+    $telErr = 'Your phone number please!';
+    } elseif(array_key_exists('tel', $_POST)){
+    if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['tel']))
+    { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+    $telErr = 'Invalid format!';
+    } else{
+    $tel = $_POST['tel'];
+    }
+    }
+
+if(empty($_POST['comments'])){
+    $commentsErr= ' Please lets us a comment!';
+}else{
+    $comments = $_POST['comments'];
+}
+
+if(empty($_POST['gender'])){
+    $genderErr = 'please check on!';
+}else{
+    $gender = $_POST['gender'];
+}
+if($gender == 'male'){
+  $male = 'checked';
+}
+elseif($gender == 'female'){
+   $female = 'checked';
+}
+function myWines(){
+    $myReturn = '';
+if(!empty($_POST['wines'])){
+    
+ $myReturn = implode(',', $_POST['wines']);
+    
+}//end if
+return $myReturn;
+}//end function
+
+if (isset($_POST['firstName'],
+          $_POST['lastName'],
+          $_POST['gender'],
+          $_POST['tel'],
+          $_POST['comment'],
+          $_POST['privacy'],
+          $_POST['wines'])) {
+
+    $to = 'sebastianquintan@gmail.com';
+    $subject = 'Test Email' .date('m/d/y');
+    $body = '' .$firstName. 'has filled out your form '.$PHP_EOL. '';
+    $body .= 'email '.$email.' '.$PHP_EOL. '';
+    $body .= 'your phone number:'.$tel.' '.$PHP_EOL. '';
+    $body .= 'Your Wine  '.myWines().' '.$PHP_EOL. '';
+    $body .= 'gender '.$gender.' '.$PHP_EOL. '';
+    $body .= 'comments: '.$comments. '';
+
+    $headers = array(
+      'From' => 'no-reply@gmail.com',
+      'Reply-to' => ''.$email.'');
+
+
+    mail($to, $subject, $body, $headers) ;
+    header('Location: thx.php');
+
+}//close if _SERVER request method
+}
+
 ?>
