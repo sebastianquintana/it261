@@ -4,6 +4,7 @@
     <meta charset = "UTF-8">
     <title><?php echo $title ?></title>
   <link href="../../../it261/website/css/style.css" type="text/css" rel="stylesheet">
+  <link href="../../../it261/website/css/emailable.css" type="text/css" rel="stylesheet">
 </head>
 <body class="<?php echo $body ;  ?>">
 <header>

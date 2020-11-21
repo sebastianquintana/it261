@@ -209,4 +209,15 @@ if (isset($_POST['firstName'],
 }//close if _SERVER request method
 }
 
+
+function myerror($myFile, $myLine, $errorMsg){
+  if (defined('DEBUG') && DEBUG){
+  echo 'Error in file: <b>'.$myFile.' </b> on the line <b>'.$myLine.'</b>';
+  echo 'Error messege: <b>'.$errorMsg.' </b>';
+  die();
+ }else{
+     echo ' Houston we have a problem';
+     die();
+ }
+}
 ?>
