@@ -1,5 +1,8 @@
 <?php
+ob_start(); //this prevent  headers errors before reading the whole page.
 
+define('DEBUG', 'TRUE');
+include('credentials.php');
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 $people['Donald_Trump'] = 'trump_ Almost ex-President';
@@ -39,7 +42,7 @@ switch(THIS_PAGE){
     $body = 'Daily';
   break;
 
-  case 'customers.php':
+  case 'customer.php':
     $title = 'Our very important customers';
     $mainHeadline = 'Hello customers - Good to see you!';
     $center = 'center';
@@ -69,7 +72,7 @@ switch(THIS_PAGE){
 $nav ['index.php'] = 'Home';
 $nav ['about.php'] = 'About';
 $nav ['daily.php'] = 'Daily';
-$nav ['customers.php'] = 'Customers';
+$nav ['custumer.php'] = 'Customers';
 $nav ['contact.php'] = 'Contact';
 $nav ['gallery.php'] = 'Gallery';
 
@@ -208,6 +211,9 @@ if (isset($_POST['firstName'],
 
 }//close if _SERVER request method
 }
+
+
+
 
 
 function myerror($myFile, $myLine, $errorMsg){

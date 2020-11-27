@@ -2,6 +2,10 @@
 include('../../../it261/week8/config.php');
 include('../../week8/includes/header.php');
 //we are going to connect to the database
+
+?>
+<main>
+<?php
 $sql = ' SELECT * FROM People';
 
 $iConn = @mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME) 
@@ -32,6 +36,13 @@ while($row = mysqli_fetch_assoc($result)){
     //close the connection
 
 @mysqli_close($iConn);
+?>
+</main>
+
+<aside>
+<h3> This is my aside </h3>
+</aside>
+<?php
 
 include('includes/footer');
 ?>

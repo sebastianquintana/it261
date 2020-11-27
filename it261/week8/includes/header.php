@@ -5,6 +5,7 @@
     <title>People page</title>
   <link href="css/style-people.css" type="text/css" rel="stylesheet">
   
+  
 </head>
 <body>
 

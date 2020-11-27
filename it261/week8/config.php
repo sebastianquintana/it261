@@ -22,7 +22,7 @@
      echo 'Error message: <b>'.$errorMsg.' </b>';
      die();
     }else{
-        echo ' Houston we have a problem';
-        die();
-    }
- }
+    echo ' Houston we have a problem';
+     die()
+    }//end else
+ }// end function
