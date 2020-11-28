@@ -1,6 +1,6 @@
 <?php 
 
-include('../website/config.php');
+include('website/config.php');
 
 if(isset($_GET['id'])){
     $id = (int)$_GET['id'];
@@ -48,7 +48,7 @@ if($Feedback == ''){
     echo '<p>'.$description.'</p>';
 } else {
   echo $Feedback;
-  echo '<p> <a href="includes/pokemon.php">Go back to pokemon page! </p>';
+  echo '<p> <a href="website/includes/pokemon.php">Go back to pokemon page! </p>';
 }//end else
 
 ?>
@@ -57,7 +57,7 @@ if($Feedback == ''){
 <aside>
 <?php 
 if($Feedback === ''){
-    echo '<img src="uploads/pokemon'.$id.'.jpg" alt = "'.$pokemonName.'">';
+    echo '<img src="website/uploads/pokemon'.$id.'.jpg" alt = "'.$pokemonName.'">';
 } else {
     echo $Feedback;
 }

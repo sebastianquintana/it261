@@ -5,7 +5,7 @@
 
  define('DEBUG', 'TRUE');//we want to see our error
 
- include('credentials.php');
+ include('week8/credentials.php');
 
 
 

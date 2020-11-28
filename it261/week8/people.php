@@ -1,12 +1,12 @@
 <?php
-include('../../../it261/week8/config.php');
-include('../../week8/includes/header.php');
+include('week8/config.php');
+include('week8/includes/header.php');
 //we are going to connect to the database
 
 ?>
 <main>
 <?php
-$sql = ' SELECT * FROM People';
+$sql = ' SELECT * FROM people';
 
 $iConn = @mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME) 
 or die(myerror(__FILE__,__LINE__,mysqli_connect_error()));
@@ -25,7 +25,7 @@ while($row = mysqli_fetch_assoc($result)){
          echo '</ul>';
 }//close while
 } else {//what if there are no people
-       echo 'Nobody at home';
+    echo 'Nobody at home';
 }//else end 
 
 
@@ -44,5 +44,5 @@ while($row = mysqli_fetch_assoc($result)){
 </aside>
 <?php
 
-include('includes/footer');
+include('week8/includes/footer');
 ?>
