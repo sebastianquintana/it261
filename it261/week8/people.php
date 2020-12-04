@@ -1,6 +1,6 @@
 <?php
-include('week8/config.php');
-include('week8/includes/header.php');
+include('config.php');
+include('includes/header.php');
 //we are going to connect to the database
 
 ?>
@@ -44,5 +44,5 @@ while($row = mysqli_fetch_assoc($result)){
 </aside>
 <?php
 
-include('week8/includes/footer');
+include('includes/footer.php');
 ?>

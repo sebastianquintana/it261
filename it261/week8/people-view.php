@@ -1,10 +1,10 @@
 <?php
-include('week8/config.php');
+include('config.php');
 if(isset($_GET['id'])){
     $id = (int)$_GET['id'];
 
 } else {
-    header('Location:week8/people.php');
+    header('Location: people.php');
   
 }
 
