@@ -1,11 +1,11 @@
 <?php 
 
-include('website/config.php');
+include('config.php');
 
 if(isset($_GET['id'])){
     $id = (int)$_GET['id'];
 }else {
-    header('Location:includes/pokemon.php');
+    header('Location:custumer.php');
 }
 
 $sql = 'SELECT * FROM pokemon WHERE pokemonID = '.$id.' ';
@@ -57,7 +57,7 @@ if($Feedback == ''){
 <aside>
 <?php 
 if($Feedback === ''){
-    echo '<img src="website/uploads/pokemon'.$id.'.jpg" alt = "'.$pokemonName.'">';
+    echo '<img src="uploads/pokemon'.$id.'.jpg" alt = "'.$pokemonName.'">';
 } else {
     echo $Feedback;
 }

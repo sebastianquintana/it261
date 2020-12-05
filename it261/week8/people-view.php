@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
 }
 
 
-$sql = 'SELECT * FROM people WHERE peopeID = '.$id.' ';
+$sql = 'SELECT * FROM people WHERE PeopeID = '.$id.' ';
 
 //connect to the database
 
@@ -77,3 +77,4 @@ if($Feedback === ''){
 
 <?php 
 include('includes/footer.php');
+?>

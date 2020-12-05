@@ -1,6 +1,6 @@
 <?php
 
-include('website/includes/config.php');
+include('includes/config.php');
 
 
 ?>
@@ -18,7 +18,7 @@ $result = mysqli_query($iConn,$sql) or die(myerror(__FILE__,__LINE__,mysqli_erro
 if(mysqli_num_rows($result) > 0){// showing the records
 while($row = mysqli_fetch_assoc($result)){
          echo '<ul>';//use a similar a href's value that we used for out switch assigment 
-         echo '<li class="bold">Click here for more information <a href="includes/pokemon-view.php?id='.$row['pokemonID'].'">'.$row['pokemonName'].'</a> </li>';
+         echo '<li class="bold">Click here for more information <a href="custumer-view.php?id='.$row['pokemonID'].'">'.$row['pokemonName'].'</a> </li>';
          echo '<li>'.$row['edition'].'</li>';
          echo '<li>'.$row['price'].'</li>';
          echo '</ul>';
