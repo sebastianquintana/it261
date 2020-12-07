@@ -13,7 +13,7 @@ if(isset($_POST['UserName'])) echo $_POST['UserName']; ?>"?>
 
 <label>Password </label>
 <input type = "password" name = "Password" value = "<?php 
-//include('errors.php') 
+include('errors.php') 
 ?>"?>
 <button type = "submit" class = "btn" name="login_user">Login</button>
 <button type = "button"

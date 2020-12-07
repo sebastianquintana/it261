@@ -19,7 +19,7 @@ while($row = mysqli_fetch_assoc($result)){
         //this array will display the contents or your row
 
          echo '<ul>';//use a similar a href's value that we used for out switch assigment 
-         echo '<li class="bold">For more information <a href="people-view.php?id='.$row['PeopeID'].'">'.$row['FirstName'].'</a> </li>';
+         echo '<li class="bold">For more information <a href="people-view.php?id='.$row['PeopleID'].'">'.$row['FirstName'].'</a> </li>';
          echo '<li>'.$row['LastName'].'</li>';
          echo '<li>'.$row['Occupation'].'</li>';
          echo '</ul>';

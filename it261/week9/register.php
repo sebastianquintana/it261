@@ -1,5 +1,5 @@
 <?php
-// include('server.php');
+//include('server.php');
 include('includes/header.php');
 
 
@@ -34,7 +34,7 @@ if(isset($_POST['Email'])) echo $_POST['Email']; ?>">
 onclick = "window.location.href = '<?php echo 
 htmlspecialchars($_SERVER['PHP_SELF']); ?>' ">Reset</button>
 <?php 
-// include('errors.php');
+include('errors.php');
 ?>
 </fieldset>
 </form>

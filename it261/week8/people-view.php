@@ -1,15 +1,18 @@
 <?php
 include('config.php');
+include('includes/header.php');
+?>
+<?php
 if(isset($_GET['id'])){
     $id = (int)$_GET['id'];
 
 } else {
     header('Location: people.php');
   
-}
+}//end else
 
 
-$sql = 'SELECT * FROM people WHERE PeopeID = '.$id.' ';
+$sql = 'SELECT * FROM people WHERE PeopleID = '.$id.' ';
 
 //connect to the database
 
@@ -19,7 +22,7 @@ or die(myerror(__FILE__,__LINE__,mysqli_connect_error()));
 
 $result = mysqli_query($iConn,$sql) or die(myerror(__FILE__,__LINE__,mysqli_error($iConn)));
 
-if(mysqli_num($result) > 0 ){
+if(mysqli_num_rows($result) > 0 ){
     while($row = mysqli_fetch_assoc($result)){
         $FirstName = stripslashes($row['FirstName']);
         $LastName = stripslashes($row['LastName']);
@@ -33,7 +36,7 @@ if(mysqli_num($result) > 0 ){
         $Feedback = 'Sorry, no candidates -they are partying';
     }
 
-include('includes/header.php');?>
+?>
 
 <main>
 

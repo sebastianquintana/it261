@@ -75,7 +75,7 @@ header(Location: 'login.php');
 
 if(isset($_POST['login_user'])){
     $UserName = mysqli_real_escape_string($db, $_POST['UserName']);
-    $Password = mysqli_real_escape_string($db, $_POST['Password']);
+    $Password = mysqli_real_escape_string($db, $_POST['password']);
 
 
 if(empty($UserName)){
@@ -87,10 +87,10 @@ if(empty($Password)){
     }
 
 if(count($errors) == 0){
-    $password = md5($Password);
+    $password = md5($password);
 
     $query = "SELECT * FROM Users WHERE UserName = '$UserName' and
-    Password = '$Password' ";
+    password = '$password' ";
 
     $result = mysqli_query($db, $query);
     if(mysqli_num_rows($result) == 1){
@@ -100,6 +100,6 @@ if(count($errors) == 0){
     header('Location:index.php');
     }else{
       array_push($errors, 'Wrong Username/password combination')  
-    }
-}
+    }//else end 
+}//if end
 }//close isset login user
