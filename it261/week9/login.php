@@ -9,12 +9,12 @@ include('includes/header.php');
 <fieldset>
 <label>Username </label>
 <input type = "text" name = "UserName" value = "<?php 
-if(isset($_POST['UserName'])) echo $_POST['UserName']; ?>"?>
+if(isset($_POST['UserName'])) echo $_POST['UserName']; ?>">
 
 <label>Password </label>
 <input type = "password" name = "Password" value = "<?php 
 include('errors.php') 
-?>"?>
+?>">
 <button type = "submit" class = "btn" name="login_user">Login</button>
 <button type = "button"
 onclick = "window.location.href = '<?php echo 

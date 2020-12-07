@@ -1,19 +1,17 @@
 <?php
 //include('server.php');
 include('includes/header.php');
-
-
 ?>
 <h1>Register Today</h1>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ; ?>" method = "post">
 <fieldset>
 <label> First Name </label>
 <input type = "text" name = "FirstName" value = "<?php 
-if(isset($_POST['FirstName'])) echo $_POST['FirstName']; ?>"?>
+if(isset($_POST['FirstName'])) echo $_POST['FirstName']; ?>">
 
 <label> Last Name </label>
 <input type = "text" name = "LastName" value = "<?php 
-if(isset($_POST['LastName'])) echo $_POST['LastName']; ?>"?>
+if(isset($_POST['LastName'])) echo $_POST['LastName']; ?>">
 
 <label> User Name </label>
 <input type = "text" name ="UserName" value = "<?php 
