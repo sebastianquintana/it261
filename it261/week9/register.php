@@ -1,5 +1,5 @@
 <?php
-//include('server.php');
+include('server.php');
 include('includes/header.php');
 ?>
 <h1>Register Today</h1>
@@ -37,4 +37,4 @@ include('errors.php');
 </fieldset>
 </form>
 
-<p class= "center">Already a member? <a href = "../week9/login.php"> Please sign in </a></p>
+<p class= "center">Already a member? <a href = "login.php"> Please sign in </a></p>

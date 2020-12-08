@@ -1,4 +1,4 @@
-<?php
+<?php//server page
 
 session_start();
 include('config.php');
@@ -75,14 +75,14 @@ header(Location: 'login.php');
 
 if(isset($_POST['login_user'])){
     $UserName = mysqli_real_escape_string($db, $_POST['UserName']);
-    $Password = mysqli_real_escape_string($db, $_POST['password']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
 
 
 if(empty($UserName)){
         array_push($errors,'UserName is required');
     }
 
-if(empty($Password)){
+if(empty($password)){
         array_push($errors,'Password is required');
     }
 

@@ -1,5 +1,5 @@
 <?php 
-
+//Sebastian's config file
 //this will be the configuration file where we are going to link the credentials.php
  ob_start(); //this prevent  headers errors before reading the whole page.
 
@@ -16,13 +16,17 @@
 
 
 //please remeber this is place at the very bottom of your config file
- function myerror($myFile, $myLine, $errorMsg){
-     if (defined('DEBUG') && DEBUG){
-     echo 'Error in file: <b>'.$myFile.' </b> on the line: <b>'.$myLine.'</b>';
-     echo 'Error message: <b>'.$errorMsg.' </b>';
-     die();
-    }else{
-    echo ' Houston we have a problem';
-     die()
-    }//end else
- }// end function
+ function myerror($myFile, $myLine, $errorMsg) {
+    
+  if(defined('DEBUG')  && DEBUG)  {
+      
+      echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+    
+    
+}

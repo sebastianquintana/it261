@@ -1,5 +1,5 @@
 <?php
-include('server.php');
+//include('server.php');
 
 include('includes/header.php');
 ?>
@@ -23,4 +23,4 @@ htmlspecialchars($_SERVER['PHP_SELF']); ?>' ">Reset</button>
 
 </form>
 
-<p>Haven't Registered? <a href= "register.php">Register here</a> </p>
+<p class="login-register">Haven't Registered? <a href= "register.php">Register here</a> </p>
