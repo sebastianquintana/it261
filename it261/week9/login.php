@@ -1,5 +1,5 @@
 <?php
-//include('server.php');
+include('server.php');
 
 include('includes/header.php');
 ?>
@@ -10,11 +10,13 @@ include('includes/header.php');
 <label>Username </label>
 <input type = "text" name = "UserName" value = "<?php 
 if(isset($_POST['UserName'])) echo $_POST['UserName']; ?>">
-
+<!--CHANGE PASSWORD BELOW TO password-->
 <label>Password </label>
-<input type = "password" name = "Password" value = "<?php 
+<!--Name = password  NO VALUE = PHP!!!!-->
+<input type = "password" name = "password"> 
+    <?php 
 include('errors.php') 
-?>">
+?>
 <button type = "submit" class = "btn" name="login_user">Login</button>
 <button type = "button"
 onclick = "window.location.href = '<?php echo 

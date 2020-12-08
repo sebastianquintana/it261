@@ -3,6 +3,8 @@
 
 session_start();
 
+include('config.php');
+
 if(!isset($_SESSION['UserName'])){
     $_SESSION['msg'] = 'You must log in first';
     header ('Location: login.php');
