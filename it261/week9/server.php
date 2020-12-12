@@ -1,5 +1,5 @@
-<?php //server page
-// Sebastian page
+<?php  //server page!!! - Sebastian
+
 session_start();
 include('config.php');
 
