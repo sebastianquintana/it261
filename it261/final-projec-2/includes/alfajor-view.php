@@ -1,21 +1,18 @@
-<?php 
-
+<?php
 include('config.php');
 include('includes/header.php');
 ?>
 <?php
-
-
 if(isset($_GET['id'])){
     $id = (int)$_GET['id'];
 
 } else {
-    header('Location: people.php');
+    header('Location: custumer.php');
   
 }//end else
 
 
-$sql = 'SELECT * FROM alfajores WHERE AlfajorID  = '.$id.' ';
+$sql = 'SELECT * FROM alfajores WHERE AlfajorID = '.$id.' ';
 
 //connect to the database
 
@@ -29,30 +26,31 @@ if(mysqli_num_rows($result) > 0 ){
     while($row = mysqli_fetch_assoc($result)){
         $AlfajorName = stripslashes($row['AlfajorName']);
         $price = stripslashes($row['price']);
-        $description = stripslashes($row['description']);
+        $Description = stripslashes($row['Description']);
         $DateSeason = stripslashes($row['DateSeason']);
         $Feedback = '';
     }
     }else {
-        $Feedback = 'Sorry,they eat all the alfajores';
-    }// end else
+        $Feedback = 'Sorry, no candidates -they are partying';
+    }
 
 ?>
+
 <main>
 
 <h2>Welcome to <?php echo $AlfajorName ; ?>'s Page </h2>
 <?php 
 if($Feedback == ''){
     echo '<ul>';
-    echo '<li> <b>Alfajor Flavor:</b>'.$AlfajorName.' </li>';
-    echo '<li> <b>Last Name:</b>'.$price.' </li>';
-    echo '<li> <b>birthday year :</b>'.$DateSeason.' </li>';
+    echo '<li> <b>the alfajor flavors is </b>'.$AlfajorName.' </li>';
+    echo '<li> <b>the season for this flavor is:</b>'.$DateSeason.' </li>';
+    echo '<li> <b>the price per Unit:</b>'.$price.' </li>';
 
     echo '</ul>';
     echo '<p>'.$Description.'</p>';
 } else {
   echo $Feedback;
-  echo '<p> <a href="custumer.php">Go back to menu page! </p>';
+  echo '<p> <a href="custumer.php">Go back to people page! </p>';
 }//end else
 
 ?>
@@ -79,6 +77,3 @@ if($Feedback === ''){
 <?php 
 include('includes/footer.php');
 ?>
-
-
-

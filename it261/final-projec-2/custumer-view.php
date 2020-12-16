@@ -22,7 +22,8 @@ include('includes/header.php');
  <h1><?php echo $mainHeadline; ?></h1>
 
  <?php
- include('includes/alfajor-view.php'); ?>
+ include('includes/alfajor-view.php'); 
+ ?>
 
  </main>
 <aside>

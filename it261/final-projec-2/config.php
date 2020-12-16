@@ -7,17 +7,6 @@ include('credentials.php');
 
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
-$people['Donald_Trump'] = 'trump_ Almost ex-President';
-$people['Joe_Biden'] = 'biden_President elected.';
-$people['Hilary_clint'] = 'clint_Secretery from NY';
-$people['Bernie_Sanders'] = 'berni_Senator from VT';
-$people['Elizabeth_Warren'] = 'warrn_Senator from MA';
-$people['Kamala_Harris'] = 'harri_Senator from CA';
-$people['Cory_Booker'] = 'boker_Senator from NJ';
-$people['Andrew_Yang'] = 'yangg_Enterpreneur from NY';
-$people['Pete_Buttigieg'] = 'peter_Mayor from IN';
-$people['Amy_Klobuchar'] = 'klobu_Senator from MN';
-$people['Julian_Castro'] = 'castr_House/Urban  from TX';
 
 
 
@@ -60,13 +49,6 @@ switch(THIS_PAGE){
     
   break;
 
-  case 'gallery.php':
-    $title = 'Check out our Gallery';
-    $mainHeadline = 'Welcome to our Gallery';
-    
-    $body = 'gallery inner';
-    
-  break;
 
 
 
@@ -76,7 +58,7 @@ $nav ['about.php'] = 'About';
 $nav ['daily.php'] = 'Daily';
 $nav ['custumer.php'] = 'Customers';
 $nav ['contact.php'] = 'Contact';
-$nav ['gallery.php'] = 'Gallery';
+
 
 function makeLinks($nav){
     $myReturn = '';
@@ -102,18 +84,16 @@ $lastName = '';
 $email = '';
 $comments = '';
 
-$gender = '';
-$wines = '';
-$privacy = '';
+$alfajores = '';
+$findUs = '';
 $tel = '';
 
 $firstNameErr = '';
 $lastNameErr = '';
 $emailErr = '';
 $commentsErr = '';
-$genderErr = '';
-$winesErr = '';
-$privacyErr = '';
+$find_us_Err = '';
+$alfajoresErr = '';
 $telErr = '';
 
 
@@ -138,16 +118,12 @@ if(empty($_POST['email'])){
     $email = $_POST['email'];
 }
 
-if(empty($_POST['wines'])){
-    $winesErr = 'Pick your wine !';
+if(empty($_POST['alfajores'])){
+    $alfajoresErr = 'Pick your alfajor!';
 }else{
-    $wines = $_POST['wines'];
+    $alfajor = $_POST['alfajores'];
 }
-if(empty($_POST['privacy'])){
-    $privacyErr= ' Please agree to our privacy rules!';
-}else{
-    $privacy = $_POST['privacy'];
-}
+
 if(empty($_POST['tel'])) {  // if empty, type in your number
     $telErr = 'Your phone number please!';
     } elseif(array_key_exists('tel', $_POST)){
@@ -165,22 +141,22 @@ if(empty($_POST['comments'])){
     $comments = $_POST['comments'];
 }
 
-if(empty($_POST['gender'])){
-    $genderErr = 'please check on!';
+if(empty($_POST['findUs'])){
+    $find_us_Err = 'please check on!';
 }else{
-    $gender = $_POST['gender'];
+    $findUs = $_POST['findUs'];
 }
-if($gender == 'male'){
-  $male = 'checked';
+if($findUs == 'Market'){
+  $Market = 'checked';
 }
-elseif($gender == 'female'){
-   $female = 'checked';
+elseif($findUs == 'Online'){
+   $Online = 'checked';
 }
-function myWines(){
+function myAlfajores(){
     $myReturn = '';
-if(!empty($_POST['wines'])){
+if(!empty($_POST['alfajores'])){
     
- $myReturn = implode(',', $_POST['wines']);
+ $myReturn = implode(',', $_POST['alfajores']);
     
 }//end if
 return $myReturn;
@@ -188,19 +164,18 @@ return $myReturn;
 
 if (isset($_POST['firstName'],
           $_POST['lastName'],
-          $_POST['gender'],
+          $_POST['alfajores'],
           $_POST['tel'],
           $_POST['comment'],
-          $_POST['privacy'],
-          $_POST['wines'])) {
+          $_POST['findUs'])) {
 
-    $to = 'sebastianquintan@gmail.com';
+    $to = 'szemeo@mystudentswa.com';
     $subject = 'Test Email' .date('m/d/y');
     $body = '' .$firstName. 'has filled out your form '.$PHP_EOL. '';
     $body .= 'email '.$email.' '.$PHP_EOL. '';
     $body .= 'your phone number:'.$tel.' '.$PHP_EOL. '';
-    $body .= 'Your Wine  '.myWines().' '.$PHP_EOL. '';
-    $body .= 'gender '.$gender.' '.$PHP_EOL. '';
+    $body .= 'Your  favores alfajores are   '.myAlfajores().' '.$PHP_EOL. '';
+    $body .= 'you find us  on '.$findUs.' '.$PHP_EOL. '';
     $body .= 'comments: '.$comments. '';
 
     $headers = array(
@@ -209,7 +184,7 @@ if (isset($_POST['firstName'],
 
 
     mail($to, $subject, $body, $headers) ;
-    header('Location: thx.php');
+    header('Location:thx.php');
 
 }//close if _SERVER request method
 }

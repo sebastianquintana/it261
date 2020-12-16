@@ -13,7 +13,7 @@ if(isset($_GET['logout'])) {
 }
 
 include('config.php');
-      include('includes/header.php');
+include('includes/header.php');
       
 ?>
 
