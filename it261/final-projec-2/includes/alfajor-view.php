@@ -1,6 +1,7 @@
 <?php 
 
 include('config.php');
+include('includes/header.php');
 ?>
 <?php
 
@@ -9,11 +10,12 @@ if(isset($_GET['id'])){
     $id = (int)$_GET['id'];
 
 } else {
-    header('Location: custumer.php');
+    header('Location: people.php');
   
 }//end else
 
-$sql = 'SELECT * FROM pokemon WHERE pokemonID = '.$id.' ';
+
+$sql = 'SELECT * FROM alfajores WHERE AlfajorID  = '.$id.' ';
 
 //connect to the database
 
@@ -25,35 +27,32 @@ $result = mysqli_query($iConn,$sql) or die(myerror(__FILE__,__LINE__,mysqli_erro
 
 if(mysqli_num_rows($result) > 0 ){
     while($row = mysqli_fetch_assoc($result)){
-        $pokemonName = stripslashes($row['pokemonName']);
-        $edition = stripslashes($row['edition']);
+        $AlfajorName = stripslashes($row['AlfajorName']);
         $price = stripslashes($row['price']);
         $description = stripslashes($row['description']);
-        $releaseDate = stripslashes($row['releaseDate']);
+        $DateSeason = stripslashes($row['DateSeason']);
         $Feedback = '';
-    }//while end
+    }
     }else {
-        $Feedback = 'Sorry, no Pokemons -they are partying';
-    }//else end
+        $Feedback = 'Sorry,they eat all the alfajores';
+    }// end else
 
 ?>
-
 <main>
 
-<h2>Welcome to <?php echo $pokemonName ; ?>'s Page </h2>
+<h2>Welcome to <?php echo $AlfajorName ; ?>'s Page </h2>
 <?php 
 if($Feedback == ''){
     echo '<ul>';
-    echo '<li> <b>Pokemon Name:</b>'.$pokemonName.' </li>';
-    echo '<li> <b>Edition of the Card:</b>'.$edition.' </li>';
-    echo '<li> <b>Price:</b>'.$price.' </li>';
-    echo '<li> <b>Release year :</b>'.$releaseDate.' </li>';
+    echo '<li> <b>Alfajor Flavor:</b>'.$AlfajorName.' </li>';
+    echo '<li> <b>Last Name:</b>'.$price.' </li>';
+    echo '<li> <b>birthday year :</b>'.$DateSeason.' </li>';
 
     echo '</ul>';
-    echo '<p>'.$description.'</p>';
+    echo '<p>'.$Description.'</p>';
 } else {
   echo $Feedback;
-  echo '<p> <a href="website/includes/pokemon.php">Go back to pokemon page! </p>';
+  echo '<p> <a href="custumer.php">Go back to menu page! </p>';
 }//end else
 
 ?>
@@ -62,7 +61,7 @@ if($Feedback == ''){
 <aside>
 <?php 
 if($Feedback === ''){
-    echo '<img src="uploads/pokemon'.$id.'.jpg" alt = "'.$pokemonName.'">';
+    echo '<img src="images/alfajor'.$id.'.jpg" alt = "'.$AlfajorName.'">';
 } else {
     echo $Feedback;
 }
@@ -76,4 +75,10 @@ if($Feedback === ''){
 
 ?>
 </aside>
+
+<?php 
+include('includes/footer.php');
+?>
+
+
 

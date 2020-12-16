@@ -1,0 +1,156 @@
+/*styles for my new website*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.active {
+   color: rgb(38, 56, 95);
+}
+.home {
+    background: black;
+}
+.about {
+    background: lightcyan;
+}
+
+.contact {
+    background:lightgrey;
+}
+.daily {
+    background:lightgreen;
+}
+.gallery {
+    background: rgb(222, 224, 233);
+}
+.customers {
+    background: lightpink;
+}
+
+.center {
+    text-align: center;
+}
+header {
+    margin-bottom: 20px;
+    background: tan;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.inner-header{
+    width: 940px;
+    margin:20px auto;
+}
+
+#logo{
+    width:150px;
+    float: left;
+
+}
+nav ul {
+    float: right;
+    margin-top: 20px;
+}
+nav li{
+    float:left;
+    margin-left: 15px;
+    list-style-type: none;
+
+}
+nav a {
+    color:black;
+    text-decoration: none;
+}
+#wrapper{
+     clear: both;
+     width: 940px;
+     margin: 0 auto;
+}
+main {
+    width: 580px;
+    float: left;
+    
+}
+
+aside {
+    width: 340px;
+    float: right;
+    margin-top: 15px;
+
+}
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px dotted tan;
+    clear: both;
+}
+footer li {
+    float: left;
+    margin-right: 30px;
+    list-style-type:none ;
+}
+img {
+    max-width: 100%;
+    display: block;
+    
+}
+blockquote {
+    font-size: 1.4em;
+    margin: 20px 100px 20px 100px;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 200px;
+    margin-bottom: 12px;
+}
+.home h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    margin-bottom: 9px;
+}
+table {
+    border: 1px solid tan;
+    margin-bottom: 20px;
+    width: 580px;
+    padding:20px;
+}
+
+.candidates td :nth-child(1),
+.candidates td :nth-child(2)
+{
+    width: 150px;
+}
+
+.candidates td:nth-child(2){
+    padding-left: 20px;
+}
+
+.about-block{
+    float: left;
+}
+
+form {
+    max-width: 580px;
+    margin: 0 auto 20px auto;
+}
+input{
+    display: block;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+fieldset{
+    padding: 10px;
+}
+.center {
+    text-align: center;
+}
+.login-register{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
