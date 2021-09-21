@@ -12,4 +12,4 @@
 * Introduction to databases
 * Sending emails using server-side scripts
 
-In this class, you'll learn the difference between web pages and web applications.  We'll work with two of the world's most popular web server applications, PHP, which provides server-side scripting language to add functionality, and MySQL, the database to store the data as we build web applications.
+In this project, you'll learn the difference between web pages and web applications.  We'll work with two of the world's most popular web server applications, PHP, which provides server-side scripting language to add functionality, and MySQL, the database to store the data as we build web applications.
